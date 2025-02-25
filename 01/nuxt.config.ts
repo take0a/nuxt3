@@ -1,6 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxt/eslint', 'vuetify-nuxt-module'],
+  modules: [
+    '@nuxt/eslint',
+    'vuetify-nuxt-module',
+    '@nuxt/test-utils/module',
+  ],
   devtools: { enabled: true },
   compatibilityDate: '2024-11-01',
   eslint: {
