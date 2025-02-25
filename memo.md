@@ -275,3 +275,32 @@ export default defineVitestConfig({
   },
 })
 ```
+
+## 02 認証
+### 環境構築
+- https://nuxt.com/modules/auth-utils#quick-setup
+```
+$ pnpx nuxi module add auth-utils
+ℹ Resolved nuxt-auth-utils, adding module...
+ℹ Installing nuxt-auth-utils@0.5.16 as a dependency
+ WARN  2 deprecated subdependencies found: glob@7.2.3, inflight@1.0.6
+Packages: +21
++++++++++++++++++++++
+Progress: resolved 954, reused 833, downloaded 21, added 21, done
+
+dependencies:
++ nuxt-auth-utils 0.5.16
+
+Done in 6.3s using pnpm v10.4.1
+ℹ Adding nuxt-auth-utils to the modules
+✔ Types generated in .nuxt            
+```
+
+```
+$ pnpm dev
+```
+で実行すると、.env 上に NUXT_SESSION_PASSWORD が生成される
+
+```.env
+NUXT_SESSION_PASSWORD=9a17f7a08f604f41ac74c567f477f645
+```
