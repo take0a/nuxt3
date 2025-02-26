@@ -264,6 +264,22 @@ export default defineVitestConfig({
 ```
 
 ## 02 基本
+### app.vue と layouts と　pages 
+https://nuxt.com/docs/guide/directory-structure/layouts
+
+```app.vue
+<template>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+</template>
+```
+
+```layouts/default.vue
+```
+
+```pages/index.vue
+```
 
 
 ## 03 認証
