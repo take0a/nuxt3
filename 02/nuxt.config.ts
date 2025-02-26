@@ -4,7 +4,6 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     'vuetify-nuxt-module',
     '@nuxt/test-utils/module',
-    'nuxt-auth-utils',
   ],
   devtools: { enabled: true },
   compatibilityDate: '2024-11-01',

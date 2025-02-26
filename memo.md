@@ -231,20 +231,7 @@ Done in 1.8s using pnpm v10.4.1
 - https://nuxt.com/docs/getting-started/testing
 - https://vuetifyjs.com/en/getting-started/unit-testing/
 ```
-$ pnpm add -D @nuxt/test-utils vitest @vue/test-utils happy-dom playwright-core
- WARN  2 deprecated subdependencies found: glob@7.2.3, inflight@1.0.6
-Packages: +39
-+++++++++++++++++++++++++++++++++++++++
-Progress: resolved 933, reused 794, downloaded 39, added 39, done
-
-devDependencies:
-+ @nuxt/test-utils 3.17.0
-+ @vue/test-utils 2.4.6
-+ happy-dom 17.1.8
-+ playwright-core 1.50.1
-+ vitest 3.0.7
-
-Done in 8.1s using pnpm v10.4.1
+ 
 ```
 
 ```nuxt.config.ts
@@ -276,7 +263,10 @@ export default defineVitestConfig({
 })
 ```
 
-## 02 認証
+## 02 基本
+
+
+## 03 認証
 ### 環境構築
 - https://nuxt.com/modules/auth-utils#quick-setup
 ```
@@ -304,3 +294,5 @@ $ pnpm dev
 ```.env
 NUXT_SESSION_PASSWORD=9a17f7a08f604f41ac74c567f477f645
 ```
+
+#### Google Cloud
