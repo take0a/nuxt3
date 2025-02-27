@@ -4,13 +4,22 @@ import type { Customer } from '~/shared/types/customer'
 const customer = ref<Partial<Customer>>({})
 const formRef = useTemplateRef('form')
 
+const { error, success } = useSnackbar()
+
 const create = async () => {
   const validResult = await formRef.value?.validate()
   if (validResult?.valid) {
-    customer.value = await $fetch<Customer>('/my/customer', {
-      method: 'POST',
-      body: JSON.stringify(customer.value),
-    })
+    try {
+      customer.value = await $fetch<Customer>('/my/customer', {
+        method: 'POST',
+        body: JSON.stringify(customer.value),
+      })
+      success('登録しました')
+    }
+    catch (e) {
+      console.error(e)
+      error('失敗しました')
+    }
   }
 }
 </script>
