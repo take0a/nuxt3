@@ -7,7 +7,10 @@ const formRef = useTemplateRef('form')
 const create = async () => {
   const validResult = await formRef.value?.validate()
   if (validResult?.valid) {
-    console.log('validなのでサーバを呼びます!')
+    customer.value = await $fetch<Customer>('/my/customer', {
+      method: 'POST',
+      body: JSON.stringify(customer.value),
+    })
   }
 }
 </script>
