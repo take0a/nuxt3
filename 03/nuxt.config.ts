@@ -7,6 +7,11 @@ export default defineNuxtConfig({
     'nuxt-auth-utils',
   ],
   devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      loginPath: '/auth/google',
+    },
+  },
   compatibilityDate: '2024-11-01',
   eslint: {
     config: {

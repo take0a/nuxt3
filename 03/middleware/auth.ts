@@ -4,7 +4,8 @@ export default defineNuxtRouteMiddleware(
     if (!loggedIn.value) {
       const cookie = useCookie<string | null>('REDIRECT_COOKIE_NAME')
       cookie.value = to.fullPath
-      return navigateTo('/auth/google', { external: true })
+      const config = useRuntimeConfig()
+      return navigateTo(config.public.loginPath, { external: true })
     }
   },
 )
