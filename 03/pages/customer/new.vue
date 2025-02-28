@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import type { Customer } from '~/shared/types/customer'
 
+definePageMeta({
+  middleware: 'auth',
+})
+
 const customer = ref<Partial<Customer>>({})
 const formRef = useTemplateRef('form')
 
