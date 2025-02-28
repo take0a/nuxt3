@@ -281,7 +281,6 @@ https://nuxt.com/docs/guide/directory-structure/layouts
 ```pages/index.vue
 ```
 
-
 ## 03 認証
 ### 環境構築
 - https://nuxt.com/modules/auth-utils#quick-setup
