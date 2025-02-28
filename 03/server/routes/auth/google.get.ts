@@ -12,6 +12,8 @@ export default defineOAuthGoogleEventHandler({
       loggedInAt: Date.now(),
     })
 
-    return sendRedirect(event, '/')
+    const to = getCookie(event, 'REDIRECT_COOKIE_NAME') || '/'
+    deleteCookie(event, 'REDIRECT_COOKIE_NAME')
+    return sendRedirect(event, to)
   },
 })
